@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let navigationController = UINavigationController()
-        let initialViewController = MainListViewController()
+        let initialViewController = SearchViewController()
         navigationController.pushViewController(initialViewController, animated: true)
         
         window?.rootViewController = navigationController
