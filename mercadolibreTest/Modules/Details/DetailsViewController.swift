@@ -7,12 +7,25 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
-
+class DetailsViewController: UIViewController, BaseViewControllerProtocol {
+    var presenter: DetailsPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    func setupNavigationBar() {
+        
+    }
+    
+    func setupController() {
+        let interactor = DetailsInteractor()
+        let router = DetailsRouter()
+        presenter = DetailsPresenter()
+        presenter?.interactor = interactor
+        presenter?.router = router
+        presenter?.view = self
+        interactor.presenter = presenter as? DetailsInteractorOutputProtocol
     }
 }
 

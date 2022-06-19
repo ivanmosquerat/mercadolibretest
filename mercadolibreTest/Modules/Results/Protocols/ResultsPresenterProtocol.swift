@@ -8,5 +8,8 @@
 import Foundation
 
 protocol ResultsPresenterProtocol: AnyObject {
+    var view: ResultsViewProtocol? { get set }
+    var interactor: ResultsInteractorInputProtocol? { get set }
+    var router: ResultsRouterProtocol? { get set }
     
 }

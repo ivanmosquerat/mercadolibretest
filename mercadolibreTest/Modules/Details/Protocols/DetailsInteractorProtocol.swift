@@ -7,11 +7,10 @@
 
 import Foundation
 
-protocol DetailsInteractorInputProtocol: AnyObject {
+protocol DetailsInteractorOutputProtocol: AnyObject {
     
 }
 
-
-protocol DetailsInteractorOutputProtocol: AnyObject {
-    
+protocol DetailsInteractorInputProtocol: AnyObject {
+    var presenter: DetailsInteractorOutputProtocol? { get set }
 }

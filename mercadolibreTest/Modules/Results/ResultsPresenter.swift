@@ -8,6 +8,9 @@
 import Foundation
 
 class ResultsPresenter: ResultsPresenterProtocol {
+    weak var view: ResultsViewProtocol?
+    var interactor: ResultsInteractorInputProtocol?
+    var router: ResultsRouterProtocol?
     
 }
 

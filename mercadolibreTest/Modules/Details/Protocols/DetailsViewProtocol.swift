@@ -8,5 +8,6 @@
 import Foundation
 
 protocol DetailsViewProtocol: AnyObject {
+    var presenter: DetailsPresenterProtocol? { get set }
     
 }

@@ -8,5 +8,6 @@
 import Foundation
 
 class ResultsInteractor: ResultsInteractorInputProtocol {
+    var presenter: ResultsInteractorOutputProtocol?
     
 }

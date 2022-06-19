@@ -7,12 +7,27 @@
 
 import UIKit
 
-class ResultsViewController: UIViewController {
-
+class ResultsViewController: UIViewController, BaseViewControllerProtocol {
+    private var dataSource: DataSource<ProductProtocol>?
+    var presenter: ResultsPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    func setupNavigationBar() {
+        
+    }
+    
+    func setupController() {
+        let interactor = ResultsInteractor()
+        let router = ResultsRouter()
+        presenter = ResultsPresenter()
+        presenter?.interactor = interactor
+        presenter?.view = self
+        presenter?.router = router
+        interactor.presenter = presenter as? ResultsInteractorOutputProtocol
+        dataSource?.resultsPresenter = presenter
     }
 }
 

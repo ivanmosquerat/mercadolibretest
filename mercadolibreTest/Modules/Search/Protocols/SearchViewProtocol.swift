@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol SearchViewProtocol {
+protocol SearchViewProtocol: AnyObject {
     var presenter: SearchPresenterProtocol? { get set }
 }

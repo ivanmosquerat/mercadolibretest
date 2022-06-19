@@ -7,9 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
-    
-    private var dataSource: DataSource<ProductProtocol>?
+class SearchViewController: UIViewController, BaseViewControllerProtocol {
     var presenter: SearchPresenterProtocol?
 
     override func viewDidLoad() {

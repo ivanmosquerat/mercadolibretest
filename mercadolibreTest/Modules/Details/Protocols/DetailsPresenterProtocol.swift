@@ -8,5 +8,7 @@
 import Foundation
 
 protocol DetailsPresenterProtocol: AnyObject {
-    
+    var view: DetailsViewProtocol? { get set }
+    var interactor: DetailsInteractorInputProtocol? { get set }
+    var router: DetailsRouterProtocol? { get set }
 }

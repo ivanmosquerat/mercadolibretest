@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ResultsViewProtocol {
-    
+protocol ResultsViewProtocol: AnyObject {
+    var presenter: ResultsPresenterProtocol? { get set }
 }

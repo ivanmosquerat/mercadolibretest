@@ -46,6 +46,7 @@
 		24964D2A285EDB380039A367 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D29285EDB380039A367 /* DetailsPresenter.swift */; };
 		24964D2C285EDB8F0039A367 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D2B285EDB8F0039A367 /* DetailsInteractor.swift */; };
 		24964D2E285EDBAE0039A367 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D2D285EDBAE0039A367 /* DetailsViewController.swift */; };
+		24964D31285EE3120039A367 /* BaseViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D30285EE3120039A367 /* BaseViewControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		24964D29285EDB380039A367 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		24964D2B285EDB8F0039A367 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
 		24964D2D285EDBAE0039A367 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		24964D30285EE3120039A367 /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 		24964CDC285E45860039A367 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				24964D2F285EE3000039A367 /* Protocols */,
 				24964CE1285E48300039A367 /* Managers */,
 				24964CE0285E47750039A367 /* Datasources */,
 				24964CDD285E458F0039A367 /* Network */,
@@ -361,6 +364,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		24964D2F285EE3000039A367 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				24964D30285EE3120039A367 /* BaseViewControllerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -517,6 +528,7 @@
 				24964D24285EDA6B0039A367 /* DetailsInteractorProtocol.swift in Sources */,
 				24964D02285ED3950039A367 /* SearchPresenter.swift in Sources */,
 				24964CFE285ED1E20039A367 /* SearchViewProtocol.swift in Sources */,
+				24964D31285EE3120039A367 /* BaseViewControllerProtocol.swift in Sources */,
 				24964CFC285ED1CA0039A367 /* SearchInteractorProtocol.swift in Sources */,
 				24964D10285ED5A80039A367 /* ResultsRouter.swift in Sources */,
 				24964D1E285ED9150039A367 /* DetailsWorker.swift in Sources */,

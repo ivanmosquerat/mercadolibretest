@@ -8,6 +8,10 @@
 import Foundation
 
 class DetailsPresenter: DetailsPresenterProtocol {
+    weak var view: DetailsViewProtocol?
+    var interactor: DetailsInteractorInputProtocol?
+    var router: DetailsRouterProtocol?
+    
     
 }
 
