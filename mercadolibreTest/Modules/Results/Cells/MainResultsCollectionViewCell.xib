@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mainResultCell" id="gTV-IL-0wX" customClass="MainResultsCollectionViewCell" customModule="mercadolibreTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="403" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="403" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nb7-XB-2BZ" userLabel="Content">
+                        <rect key="frame" x="0.0" y="0.0" width="403" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Am3-w9-a9N">
+                                <rect key="frame" x="26" y="10" width="367" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TdB-fE-QhU">
+                                <rect key="frame" x="26" y="41" width="39" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpd-uD-FJQ">
+                                <rect key="frame" x="26" y="61.5" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sold quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyR-Ll-zpg">
+                                <rect key="frame" x="26" y="82.5" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TdB-fE-QhU" firstAttribute="leading" secondItem="Nb7-XB-2BZ" secondAttribute="leading" constant="26" id="0sv-lZ-iB1"/>
+                            <constraint firstItem="SyR-Ll-zpg" firstAttribute="top" secondItem="kpd-uD-FJQ" secondAttribute="bottom" id="4ua-jd-yuX"/>
+                            <constraint firstItem="kpd-uD-FJQ" firstAttribute="leading" secondItem="Nb7-XB-2BZ" secondAttribute="leading" constant="26" id="7eI-ka-CKR"/>
+                            <constraint firstItem="Am3-w9-a9N" firstAttribute="leading" secondItem="Nb7-XB-2BZ" secondAttribute="leading" constant="26" id="JCZ-aG-rR8"/>
+                            <constraint firstItem="TdB-fE-QhU" firstAttribute="top" secondItem="Am3-w9-a9N" secondAttribute="bottom" constant="8" symbolic="YES" id="Lnj-WX-chl"/>
+                            <constraint firstItem="kpd-uD-FJQ" firstAttribute="top" secondItem="TdB-fE-QhU" secondAttribute="bottom" id="Uah-T9-IEQ"/>
+                            <constraint firstItem="SyR-Ll-zpg" firstAttribute="leading" secondItem="Nb7-XB-2BZ" secondAttribute="leading" constant="26" id="WNK-bz-izL"/>
+                            <constraint firstItem="Am3-w9-a9N" firstAttribute="top" secondItem="Nb7-XB-2BZ" secondAttribute="top" constant="10" id="o3h-5x-eGW"/>
+                            <constraint firstAttribute="trailing" secondItem="Am3-w9-a9N" secondAttribute="trailing" constant="10" id="tTQ-2p-cDY"/>
+                            <constraint firstItem="Am3-w9-a9N" firstAttribute="top" secondItem="Nb7-XB-2BZ" secondAttribute="top" constant="10" id="ure-25-w1O"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Nb7-XB-2BZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9gR-kj-hoe"/>
+                <constraint firstAttribute="bottom" secondItem="Nb7-XB-2BZ" secondAttribute="bottom" id="Te5-bU-gZh"/>
+                <constraint firstAttribute="trailing" secondItem="Nb7-XB-2BZ" secondAttribute="trailing" id="VF6-gh-OZL"/>
+                <constraint firstItem="Nb7-XB-2BZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="w0p-LH-N23"/>
+            </constraints>
+            <size key="customSize" width="403" height="117"/>
+            <connections>
+                <outlet property="availableQuantityLabel" destination="kpd-uD-FJQ" id="fmb-hL-6M7"/>
+                <outlet property="productPriceLabel" destination="TdB-fE-QhU" id="Vfk-1S-Evp"/>
+                <outlet property="productTitleLabel" destination="Am3-w9-a9N" id="b2v-61-Dr9"/>
+                <outlet property="soldQuantityLabel" destination="SyR-Ll-zpg" id="ui1-D5-Gla"/>
+            </connections>
+            <point key="canvasLocation" x="387.68115942028987" y="136.27232142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -14,6 +14,7 @@ final class DataSource<T>:  NSObject,
                             UICollectionViewDelegateFlowLayout {
     
     weak var resultsPresenter: ResultsPresenterProtocol?
+    var data: [T] = []
     
     // MARK: - DataSource
     
@@ -21,11 +22,16 @@ final class DataSource<T>:  NSObject,
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainResultCell", for: indexPath) as? MainResultsCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        
+        return cell
     }
     
     // MARK: - UICollectionViewDelegate

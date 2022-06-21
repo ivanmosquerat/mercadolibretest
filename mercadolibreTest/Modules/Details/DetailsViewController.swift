@@ -8,7 +8,17 @@
 import UIKit
 
 class DetailsViewController: UIViewController, BaseViewControllerProtocol {
+    // MARK: - Properties
     var presenter: DetailsPresenterProtocol?
+    
+    // MARK: - Outlets
+    @IBOutlet private weak var titleProductLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var availableQuantityLabel: UILabel!
+    @IBOutlet private weak var sellerNameLabel: UILabel!
+    @IBOutlet private weak var sellerIdLabel: UILabel!
+    @IBOutlet private weak var sellerReputationLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

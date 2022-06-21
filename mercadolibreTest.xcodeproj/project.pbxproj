@@ -35,7 +35,6 @@
 		24964D12285ED61C0039A367 /* ResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D11285ED61C0039A367 /* ResultsPresenter.swift */; };
 		24964D14285ED6830039A367 /* ResultsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D13285ED6830039A367 /* ResultsInteractor.swift */; };
 		24964D16285ED6AB0039A367 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D15285ED6AB0039A367 /* ResultsViewController.swift */; };
-		24964D18285ED6E90039A367 /* ResultItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D17285ED6E90039A367 /* ResultItemCollectionViewCell.swift */; };
 		24964D1C285ED75D0039A367 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D1B285ED75D0039A367 /* DataSource.swift */; };
 		24964D1E285ED9150039A367 /* DetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D1D285ED9150039A367 /* DetailsWorker.swift */; };
 		24964D20285ED9C70039A367 /* DetailsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D1F285ED9C70039A367 /* DetailsRouterProtocol.swift */; };
@@ -47,6 +46,11 @@
 		24964D2C285EDB8F0039A367 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D2B285EDB8F0039A367 /* DetailsInteractor.swift */; };
 		24964D2E285EDBAE0039A367 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D2D285EDBAE0039A367 /* DetailsViewController.swift */; };
 		24964D31285EE3120039A367 /* BaseViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D30285EE3120039A367 /* BaseViewControllerProtocol.swift */; };
+		24964D33285FA38F0039A367 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24964D32285FA38F0039A367 /* SearchViewController.xib */; };
+		24964D372860E9680039A367 /* MainResultsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D352860E9680039A367 /* MainResultsCollectionViewCell.swift */; };
+		24964D382860E9680039A367 /* MainResultsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24964D362860E9680039A367 /* MainResultsCollectionViewCell.xib */; };
+		24964D3A286137750039A367 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24964D39286137750039A367 /* ResultsViewController.xib */; };
+		24964D3C286142D50039A367 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24964D3B286142D50039A367 /* DetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +103,6 @@
 		24964D11285ED61C0039A367 /* ResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenter.swift; sourceTree = "<group>"; };
 		24964D13285ED6830039A367 /* ResultsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsInteractor.swift; sourceTree = "<group>"; };
 		24964D15285ED6AB0039A367 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		24964D17285ED6E90039A367 /* ResultItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		24964D1B285ED75D0039A367 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		24964D1D285ED9150039A367 /* DetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWorker.swift; sourceTree = "<group>"; };
 		24964D1F285ED9C70039A367 /* DetailsRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouterProtocol.swift; sourceTree = "<group>"; };
@@ -111,6 +114,11 @@
 		24964D2B285EDB8F0039A367 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
 		24964D2D285EDBAE0039A367 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		24964D30285EE3120039A367 /* BaseViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerProtocol.swift; sourceTree = "<group>"; };
+		24964D32285FA38F0039A367 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		24964D352860E9680039A367 /* MainResultsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultsCollectionViewCell.swift; sourceTree = "<group>"; };
+		24964D362860E9680039A367 /* MainResultsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainResultsCollectionViewCell.xib; sourceTree = "<group>"; };
+		24964D39286137750039A367 /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
+		24964D3B286142D50039A367 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +276,7 @@
 				24964D29285EDB380039A367 /* DetailsPresenter.swift */,
 				24964D2B285EDB8F0039A367 /* DetailsInteractor.swift */,
 				24964D2D285EDBAE0039A367 /* DetailsViewController.swift */,
+				24964D3B286142D50039A367 /* DetailsViewController.xib */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -282,6 +291,7 @@
 				24964D11285ED61C0039A367 /* ResultsPresenter.swift */,
 				24964D13285ED6830039A367 /* ResultsInteractor.swift */,
 				24964D15285ED6AB0039A367 /* ResultsViewController.swift */,
+				24964D39286137750039A367 /* ResultsViewController.xib */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -289,12 +299,14 @@
 		24964CEB285E4C310039A367 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				24964D342860E8B40039A367 /* Cells */,
 				24964CED285E4C4F0039A367 /* Network */,
 				24964CEC285E4C490039A367 /* Protocols */,
 				24964CFF285ED36C0039A367 /* SearchRouter.swift */,
 				24964D01285ED3950039A367 /* SearchPresenter.swift */,
 				24964D03285ED3B10039A367 /* SearchInteractor.swift */,
 				246D64BA285E403600D4601D /* SearchViewController.swift */,
+				24964D32285FA38F0039A367 /* SearchViewController.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -321,7 +333,8 @@
 		24964CEE285E4C660039A367 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				24964D17285ED6E90039A367 /* ResultItemCollectionViewCell.swift */,
+				24964D352860E9680039A367 /* MainResultsCollectionViewCell.swift */,
+				24964D362860E9680039A367 /* MainResultsCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -370,6 +383,13 @@
 				24964D30285EE3120039A367 /* BaseViewControllerProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		24964D342860E8B40039A367 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,8 +496,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24964D382860E9680039A367 /* MainResultsCollectionViewCell.xib in Resources */,
 				246D64C3285E403600D4601D /* LaunchScreen.storyboard in Resources */,
+				24964D3A286137750039A367 /* ResultsViewController.xib in Resources */,
 				246D64C0285E403600D4601D /* Assets.xcassets in Resources */,
+				24964D33285FA38F0039A367 /* SearchViewController.xib in Resources */,
+				24964D3C286142D50039A367 /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,7 +538,6 @@
 				24964D2E285EDBAE0039A367 /* DetailsViewController.swift in Sources */,
 				24964D06285ED4AE0039A367 /* ResultsRouterProtocol.swift in Sources */,
 				24964D08285ED4CC0039A367 /* ResultsPresenterProtocol.swift in Sources */,
-				24964D18285ED6E90039A367 /* ResultItemCollectionViewCell.swift in Sources */,
 				24964CF2285EBF260039A367 /* ProductProtocol.swift in Sources */,
 				24964D26285EDAAF0039A367 /* DetailsViewProtocol.swift in Sources */,
 				24964D28285EDAEE0039A367 /* DetailsRouter.swift in Sources */,
@@ -522,6 +545,7 @@
 				24964CE5285E491C0039A367 /* URLGenerator.swift in Sources */,
 				24964D04285ED3B10039A367 /* SearchInteractor.swift in Sources */,
 				246D64B7285E403600D4601D /* AppDelegate.swift in Sources */,
+				24964D372860E9680039A367 /* MainResultsCollectionViewCell.swift in Sources */,
 				24964CF6285ED0F90039A367 /* SearchWorker.swift in Sources */,
 				24964CF8285ED1690039A367 /* SearchRouterProtocol.swift in Sources */,
 				24964D0E285ED56A0039A367 /* ResultsWorker.swift in Sources */,
