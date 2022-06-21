@@ -12,8 +12,17 @@ class SearchPresenter: SearchPresenterProtocol {
     var interactor: SearchInteractorInputProtocol?
     var router: SearchRouterProtocol?
     
+    func displayMainProducts(with search: String) {
+        interactor?.loadMainProducts(with: search)
+    }
 }
 
 extension SearchPresenter: SearchInteractorOutputProtocol {
+    func onSuccessFetchSearch(with data: [ProductProtocol]) {
+        
+    }
     
+    func onErrorFetch() {
+        
+    }
 }

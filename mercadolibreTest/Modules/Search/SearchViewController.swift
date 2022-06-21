@@ -41,6 +41,7 @@ class SearchViewController: UIViewController, BaseViewControllerProtocol {
         presenter?.view = self
         presenter?.router = router
         interactor.presenter = presenter as? SearchInteractorOutputProtocol
+        presenter?.displayMainProducts(with: "iPhone 11")
     }
 }
 

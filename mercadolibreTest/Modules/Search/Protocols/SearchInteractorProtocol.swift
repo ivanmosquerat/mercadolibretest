@@ -8,11 +8,14 @@
 import Foundation
 
 protocol SearchInteractorOutputProtocol: AnyObject {
-    
+    func onSuccessFetchSearch(with data: [ProductProtocol])
+    func onErrorFetch()
 }
 
 protocol SearchInteractorInputProtocol: AnyObject {
     var presenter: SearchInteractorOutputProtocol? { get set }
+    
+    func loadMainProducts(with search: String)
 }
 
 

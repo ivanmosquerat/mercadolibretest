@@ -9,15 +9,16 @@ import Foundation
 
 class URLGenerator {
     private static let baseUrl          = "https://api.mercadolibre.com"
-    private static let search           = "/sites/MLA/search?q="
+    private static let searchUrl        = "/sites/MLA/search?q="
     
-    class func urlSearch() -> URL {
-        let urlString = baseUrl
-        
-        guard let url = URL(string: urlString) else {
-            fatalError("Url was not generated")
+    class func urlSearch(search: String) -> URL? {
+        guard let urlString = "\(baseUrl)\(searchUrl)\(search)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            return nil
         }
         
+        guard let url = URL(string: urlString) else {
+            return nil
+        }
         return url
     }
 }

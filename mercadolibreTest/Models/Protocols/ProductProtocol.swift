@@ -11,7 +11,6 @@ protocol ProductProtocol {
     var id                      : String { get }
     var siteId                  : String { get }
     var title                   : String { get }
-    //var seller                : Seller { get }
     var price                   : Float { get }
     var availableQuantity       : Int { get }
     var soldQuantity            : Int { get }

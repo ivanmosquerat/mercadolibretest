@@ -16,6 +16,7 @@ struct Product: ProductProtocol, Codable {
     var soldQuantity: Int
     var condition: String
     var thumbnail: String
+    var seller: Seller
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -26,5 +27,6 @@ struct Product: ProductProtocol, Codable {
         case soldQuantity = "sold_quantity"
         case condition
         case thumbnail
+        case seller
     }
 }
