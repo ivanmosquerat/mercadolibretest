@@ -16,4 +16,5 @@ protocol ProductProtocol {
     var soldQuantity            : Int { get }
     var condition               : String { get }
     var thumbnail               : String { get }
+    var seller                  : Seller? { get }
 }

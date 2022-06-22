@@ -10,6 +10,7 @@ import UIKit
 class DetailsViewController: UIViewController, BaseViewControllerProtocol {
     // MARK: - Properties
     var presenter: DetailsPresenterProtocol?
+    var product: ProductProtocol?
     
     // MARK: - Outlets
     @IBOutlet private weak var titleProductLabel: UILabel!
@@ -22,10 +23,12 @@ class DetailsViewController: UIViewController, BaseViewControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
     
     func setupNavigationBar() {
-        
+        self.title = "Detail"
+        self.navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     func setupController() {
@@ -37,8 +40,20 @@ class DetailsViewController: UIViewController, BaseViewControllerProtocol {
         presenter?.view = self
         interactor.presenter = presenter as? DetailsInteractorOutputProtocol
     }
+    
+    private func setupUI() {
+        setupNavigationBar()
+        guard let product = product else {
+            return
+        }
+
+        titleProductLabel.text = product.title
+        priceLabel.text = "\(product.price)"
+        availableQuantityLabel.text = "Available: \(product.availableQuantity)"
+        sellerNameLabel.text = product.seller?.eshop?.nickName
+        sellerIdLabel.text = "ID: \(product.seller?.eshop?.sellerId ?? 0)"
+        sellerReputationLabel.text = "Reputation: \(product.seller?.reputation?.sellerStatus ?? "")"
+    }
 }
 
-extension DetailsViewController: DetailsViewProtocol {
-    
-}
+extension DetailsViewController: DetailsViewProtocol {}

@@ -16,7 +16,7 @@ struct Product: ProductProtocol, Codable {
     var soldQuantity: Int
     var condition: String
     var thumbnail: String
-    var seller: Seller
+    var seller: Seller?
     
     enum CodingKeys: String, CodingKey {
         case id

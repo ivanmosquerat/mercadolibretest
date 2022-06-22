@@ -12,5 +12,7 @@ protocol SearchPresenterProtocol: AnyObject {
     var interactor: SearchInteractorInputProtocol? { get set }
     var router: SearchRouterProtocol? { get set }
     
+    func presentProductDetail(with item: ProductProtocol)
+    func presentAllProductsList(with list: [ProductProtocol])
     func displayMainProducts(with search: String)
 }

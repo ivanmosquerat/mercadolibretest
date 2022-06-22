@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol SearchRouterProtocol {
-    
+    func presentProductDetail(on view: SearchViewProtocol, with item: ProductProtocol)
+    func presentAllProductList(on view: SearchViewProtocol, with list: [ProductProtocol])
 }

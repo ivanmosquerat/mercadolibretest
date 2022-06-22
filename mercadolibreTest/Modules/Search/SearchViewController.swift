@@ -43,6 +43,7 @@ class SearchViewController: UIViewController, BaseViewControllerProtocol {
         presenter?.router = router
         interactor.presenter = presenter as? SearchInteractorOutputProtocol
         searchBar.delegate = self
+        dataSource.searchPresenter = presenter
     }
 }
 

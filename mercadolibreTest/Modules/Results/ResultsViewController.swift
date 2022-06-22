@@ -11,6 +11,7 @@ class ResultsViewController: UIViewController, BaseViewControllerProtocol {
     // MARK: - Properties
     private var dataSource: DataSource = DataSource<ProductProtocol>()
     var presenter: ResultsPresenterProtocol?
+    var allProductsList: [ProductProtocol] = []
     
     // MARK: - Outlets
     @IBOutlet weak var resultsCollectionView: UICollectionView!

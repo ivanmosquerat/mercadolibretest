@@ -13,6 +13,7 @@ final class DataSource<T>:  NSObject,
                             UICollectionViewDataSource,
                             UICollectionViewDelegateFlowLayout {
     
+    weak var searchPresenter: SearchPresenterProtocol?
     weak var resultsPresenter: ResultsPresenterProtocol?
     var data: [T] = []
     
@@ -34,6 +35,10 @@ final class DataSource<T>:  NSObject,
     }
     
     // MARK: - UICollectionViewDelegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let product = data[indexPath.row] as? ProductProtocol else { return }
+        searchPresenter?.presentProductDetail(with: product)
+    }
     
     // MARK: - UICollectionViewDelegateFlowLayout
 }

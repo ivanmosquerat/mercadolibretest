@@ -8,9 +8,21 @@
 import Foundation
 
 class SearchPresenter: SearchPresenterProtocol {
+    
+    
     weak var view: SearchViewProtocol?
     var interactor: SearchInteractorInputProtocol?
     var router: SearchRouterProtocol?
+    
+    func presentProductDetail(with item: ProductProtocol) {
+        guard let view = view else { return }
+        router?.presentProductDetail(on: view, with: item)
+    }
+    
+    func presentAllProductsList(with list: [ProductProtocol]) {
+        guard let view = view else { return }
+        router?.presentAllProductList(on: view, with: list)
+    }
     
     func displayMainProducts(with search: String) {
         interactor?.loadMainProducts(with: search)
