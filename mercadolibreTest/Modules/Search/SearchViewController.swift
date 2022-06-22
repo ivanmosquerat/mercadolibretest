@@ -15,6 +15,7 @@ class SearchViewController: UIViewController, BaseViewControllerProtocol {
     // MARK: - Outlets
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var mainResultsCollecitonView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Actions
     @IBAction func seeAllButtonAction(_ sender: UIButton) {
@@ -41,7 +42,28 @@ class SearchViewController: UIViewController, BaseViewControllerProtocol {
         presenter?.view = self
         presenter?.router = router
         interactor.presenter = presenter as? SearchInteractorOutputProtocol
-        presenter?.displayMainProducts(with: "iPhone 11")
+        searchBar.delegate = self
+    }
+}
+
+// MARK: - Search bar
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        return true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        dataSource.data = []
+        guard let search = searchBar.text else { return }
+        
+        activityIndicator.startAnimating()
+        presenter?.displayMainProducts(with: search)
+        self.view.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
     }
 }
 
@@ -60,7 +82,24 @@ extension SearchViewController {
 }
 
 extension SearchViewController: SearchViewProtocol {
+    
+    
     @objc func refreshData() {
         
+    }
+    
+    func showMainProducts(with data: [ProductProtocol]) {
+        dataSource.data = data
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+            self.mainResultsCollecitonView.reloadData()
+        }
+    }
+    
+    func showErrorAlert(with alert: UIAlertController) {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+            self.present(alert, animated: true)
+        }
     }
 }

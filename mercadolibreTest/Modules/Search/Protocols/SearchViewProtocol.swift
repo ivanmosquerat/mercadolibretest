@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol SearchViewProtocol: AnyObject {
     var presenter: SearchPresenterProtocol? { get set }
+    
+    func showMainProducts(with data: [ProductProtocol])
+    func showErrorAlert(with alert: UIAlertController)
 }

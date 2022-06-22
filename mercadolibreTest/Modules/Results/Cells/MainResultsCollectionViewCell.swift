@@ -20,4 +20,10 @@ class MainResultsCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+    func setupCell(with item: ProductProtocol) {
+        productTitleLabel.text = item.title
+        productPriceLabel.text = "\(item.price)"
+        availableQuantityLabel.text = "Available: \(item.availableQuantity)"
+        soldQuantityLabel.text = "Sold: \(item.soldQuantity)"
+    }
 }

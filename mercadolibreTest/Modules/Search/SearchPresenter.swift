@@ -19,10 +19,14 @@ class SearchPresenter: SearchPresenterProtocol {
 
 extension SearchPresenter: SearchInteractorOutputProtocol {
     func onSuccessFetchSearch(with data: [ProductProtocol]) {
+        let filteredData = data.sorted(by: { $0.soldQuantity > $1.soldQuantity }).prefix(5)
+        let arrayData =  Array(filteredData)
         
+        view?.showMainProducts(with: arrayData)
     }
     
     func onErrorFetch() {
-        
+        let alert = HandlingErrorManager.errorAlert()
+        view?.showErrorAlert(with: alert)
     }
 }

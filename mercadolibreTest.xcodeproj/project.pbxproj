@@ -59,6 +59,7 @@
 		24964D48286162480039A367 /* EshopProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D47286162480039A367 /* EshopProtocol.swift */; };
 		24964D4A286162550039A367 /* ReputationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D49286162550039A367 /* ReputationProtocol.swift */; };
 		24964D4C2861626E0039A367 /* ProductResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24964D4B2861626E0039A367 /* ProductResponseProtocol.swift */; };
+		24F8996128628EA000256B45 /* HandlingErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F8996028628EA000256B45 /* HandlingErrorManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		24964D47286162480039A367 /* EshopProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EshopProtocol.swift; sourceTree = "<group>"; };
 		24964D49286162550039A367 /* ReputationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReputationProtocol.swift; sourceTree = "<group>"; };
 		24964D4B2861626E0039A367 /* ProductResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponseProtocol.swift; sourceTree = "<group>"; };
+		24F8996028628EA000256B45 /* HandlingErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandlingErrorManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 		24964CE1285E48300039A367 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				24F8996028628EA000256B45 /* HandlingErrorManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				24964D44286161AE0039A367 /* ProductResponse.swift in Sources */,
 				24964D372860E9680039A367 /* MainResultsCollectionViewCell.swift in Sources */,
 				24964CF6285ED0F90039A367 /* SearchWorker.swift in Sources */,
+				24F8996128628EA000256B45 /* HandlingErrorManager.swift in Sources */,
 				24964CF8285ED1690039A367 /* SearchRouterProtocol.swift in Sources */,
 				24964D0E285ED56A0039A367 /* ResultsWorker.swift in Sources */,
 				24964D24285EDA6B0039A367 /* DetailsInteractorProtocol.swift in Sources */,

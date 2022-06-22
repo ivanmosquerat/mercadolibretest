@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="mercadolibreTest" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="0qm-Wd-bX4" id="aRu-4N-Emm"/>
                 <outlet property="mainResultsCollecitonView" destination="I0x-pD-snz" id="XXj-of-caJ"/>
                 <outlet property="searchBar" destination="DfR-DA-yde" id="DJH-TB-bAH"/>
                 <outlet property="view" destination="d4x-zc-VJt" id="A1N-x4-JMe"/>
@@ -22,7 +23,7 @@
             <subviews>
                 <searchBar contentMode="redraw" placeholder="Search products" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DfR-DA-yde">
                     <rect key="frame" x="0.0" y="44" width="414" height="51"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                 </searchBar>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THD-27-TUb">
                     <rect key="frame" x="331" y="105" width="67" height="31"/>
@@ -43,6 +44,10 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="0qm-Wd-bX4">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="nyJ-Zb-6iy"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -57,7 +62,7 @@
                 <constraint firstItem="nyJ-Zb-6iy" firstAttribute="trailing" secondItem="I0x-pD-snz" secondAttribute="trailing" id="mgr-eq-Ola"/>
                 <constraint firstItem="DfR-DA-yde" firstAttribute="top" secondItem="nyJ-Zb-6iy" secondAttribute="top" id="zUq-OX-3mA"/>
             </constraints>
-            <point key="canvasLocation" x="642" y="132"/>
+            <point key="canvasLocation" x="640.57971014492762" y="131.91964285714286"/>
         </view>
     </objects>
     <resources>
