@@ -13,6 +13,7 @@
                 <outlet property="activityIndicator" destination="0qm-Wd-bX4" id="aRu-4N-Emm"/>
                 <outlet property="mainResultsCollecitonView" destination="I0x-pD-snz" id="XXj-of-caJ"/>
                 <outlet property="searchBar" destination="DfR-DA-yde" id="DJH-TB-bAH"/>
+                <outlet property="seeAllButton" destination="THD-27-TUb" id="gUu-sp-DS6"/>
                 <outlet property="view" destination="d4x-zc-VJt" id="A1N-x4-JMe"/>
             </connections>
         </placeholder>
@@ -25,7 +26,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="51"/>
                     <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                 </searchBar>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THD-27-TUb">
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THD-27-TUb">
                     <rect key="frame" x="331" y="105" width="67" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="See all"/>

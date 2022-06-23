@@ -12,8 +12,10 @@ class ResultsPresenter: ResultsPresenterProtocol {
     var interactor: ResultsInteractorInputProtocol?
     var router: ResultsRouterProtocol?
     
+    func presentProductDetail(with item: ProductProtocol) {
+        guard let view = view else { return }
+        router?.presentProductDetail(on: view, with: item)
+    }
 }
 
-extension ResultsPresenter: ResultsInteractorOutputProtocol {
-    
-}
+extension ResultsPresenter: ResultsInteractorOutputProtocol {}

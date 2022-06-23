@@ -34,6 +34,7 @@ extension SearchPresenter: SearchInteractorOutputProtocol {
         let filteredData = data.sorted(by: { $0.soldQuantity > $1.soldQuantity }).prefix(5)
         let arrayData =  Array(filteredData)
         
+        view?.setAllProductsList(with: data)
         view?.showMainProducts(with: arrayData)
     }
     

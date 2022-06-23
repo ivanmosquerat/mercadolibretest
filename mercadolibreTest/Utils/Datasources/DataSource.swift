@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+enum TypeCell: Int, CaseIterable {
+    case mainResults
+    case allResults
+}
+
 final class DataSource<T>:  NSObject,
                             UICollectionViewDelegate,
                             UICollectionViewDataSource,
@@ -16,10 +21,12 @@ final class DataSource<T>:  NSObject,
     weak var searchPresenter: SearchPresenterProtocol?
     weak var resultsPresenter: ResultsPresenterProtocol?
     var data: [T] = []
-    
-    // MARK: - DataSource
+    var type: TypeCell
     
     // TODO: add init
+    init(type: TypeCell) {
+        self.type = type
+    }
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -37,7 +44,14 @@ final class DataSource<T>:  NSObject,
     // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let product = data[indexPath.row] as? ProductProtocol else { return }
-        searchPresenter?.presentProductDetail(with: product)
+        
+        switch type {
+        case .mainResults:
+            searchPresenter?.presentProductDetail(with: product)
+        case .allResults:
+            resultsPresenter?.presentProductDetail(with: product)
+        }
+        
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout

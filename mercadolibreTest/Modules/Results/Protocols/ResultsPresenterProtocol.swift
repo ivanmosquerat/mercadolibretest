@@ -12,4 +12,5 @@ protocol ResultsPresenterProtocol: AnyObject {
     var interactor: ResultsInteractorInputProtocol? { get set }
     var router: ResultsRouterProtocol? { get set }
     
+    func presentProductDetail(with item: ProductProtocol)
 }

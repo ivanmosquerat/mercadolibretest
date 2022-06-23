@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ResultsRouterProtocol {
-    
+    func presentProductDetail(on view: ResultsViewProtocol, with item: ProductProtocol)
 }

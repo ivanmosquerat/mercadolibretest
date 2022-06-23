@@ -9,7 +9,7 @@ import UIKit
 
 class ResultsViewController: UIViewController, BaseViewControllerProtocol {
     // MARK: - Properties
-    private var dataSource: DataSource = DataSource<ProductProtocol>()
+    private var dataSource: DataSource<ProductProtocol> = DataSource(type: .allResults)
     var presenter: ResultsPresenterProtocol?
     var allProductsList: [ProductProtocol] = []
     
@@ -32,6 +32,7 @@ class ResultsViewController: UIViewController, BaseViewControllerProtocol {
         presenter?.router = router
         interactor.presenter = presenter as? ResultsInteractorOutputProtocol
         dataSource.resultsPresenter = presenter
+        dataSource.data = allProductsList
     }
 }
 
@@ -54,6 +55,4 @@ extension ResultsViewController {
     }
 }
 
-extension ResultsViewController: ResultsViewProtocol {
-    
-}
+extension ResultsViewController: ResultsViewProtocol {}

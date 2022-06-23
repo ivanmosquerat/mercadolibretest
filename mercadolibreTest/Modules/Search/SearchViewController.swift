@@ -9,17 +9,19 @@ import UIKit
 
 class SearchViewController: UIViewController, BaseViewControllerProtocol {
     // MARK: - Properties
-    private var dataSource: DataSource = DataSource<ProductProtocol>()
+    private var dataSource: DataSource<ProductProtocol> = DataSource(type: .mainResults)
+    private var allProductsList: [ProductProtocol] = []
     var presenter: SearchPresenterProtocol?
     
     // MARK: - Outlets
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var mainResultsCollecitonView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var seeAllButton: UIButton!
     
     // MARK: - Actions
     @IBAction func seeAllButtonAction(_ sender: UIButton) {
-        
+        presenter?.presentAllProductsList(with: allProductsList)
     }
     
     override func viewDidLoad() {
@@ -31,7 +33,7 @@ class SearchViewController: UIViewController, BaseViewControllerProtocol {
     func setupNavigationBar() {
         self.title = "Search"
         self.navigationController?.navigationBar.prefersLargeTitles = false
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshData))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(cleanData))
     }
     
     func setupController() {
@@ -84,8 +86,7 @@ extension SearchViewController {
 
 extension SearchViewController: SearchViewProtocol {
     
-    
-    @objc func refreshData() {
+    @objc func cleanData() {
         
     }
     
@@ -93,8 +94,13 @@ extension SearchViewController: SearchViewProtocol {
         dataSource.data = data
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
+            self.seeAllButton.isEnabled = true
             self.mainResultsCollecitonView.reloadData()
         }
+    }
+    
+    func setAllProductsList(with data: [ProductProtocol]) {
+        allProductsList = data
     }
     
     func showErrorAlert(with alert: UIAlertController) {
