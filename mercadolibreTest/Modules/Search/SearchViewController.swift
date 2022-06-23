@@ -18,6 +18,7 @@ class SearchViewController: UIViewController, BaseViewControllerProtocol {
     @IBOutlet private weak var mainResultsCollecitonView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var seeAllButton: UIButton!
+    @IBOutlet weak var notResultsContainer: UIView!
     
     // MARK: - Actions
     @IBAction func seeAllButtonAction(_ sender: UIButton) {
@@ -87,15 +88,24 @@ extension SearchViewController {
 extension SearchViewController: SearchViewProtocol {
     
     @objc func cleanData() {
-        
+        dataSource.data = []
+        mainResultsCollecitonView.reloadData()
+        seeAllButton.isEnabled = false
+        notResultsContainer.isHidden = false
+        searchBar.text = ""
     }
     
     func showMainProducts(with data: [ProductProtocol]) {
         dataSource.data = data
         DispatchQueue.main.async {
+            if !data.isEmpty {
+                self.activityIndicator.stopAnimating()
+                self.seeAllButton.isEnabled = !data.isEmpty
+                self.notResultsContainer.isHidden = true
+                self.mainResultsCollecitonView.reloadData()
+            }
+            
             self.activityIndicator.stopAnimating()
-            self.seeAllButton.isEnabled = true
-            self.mainResultsCollecitonView.reloadData()
         }
     }
     
