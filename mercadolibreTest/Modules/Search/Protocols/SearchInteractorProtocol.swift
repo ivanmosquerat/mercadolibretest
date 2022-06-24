@@ -16,6 +16,7 @@ protocol SearchInteractorInputProtocol: AnyObject {
     var presenter: SearchInteractorOutputProtocol? { get set }
     
     func loadMainProducts(with search: String)
+    func filterData(data: [ProductProtocol]) -> [ProductProtocol]
 }
 
 

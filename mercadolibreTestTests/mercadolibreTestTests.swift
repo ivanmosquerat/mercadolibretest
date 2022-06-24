@@ -9,28 +9,34 @@ import XCTest
 @testable import mercadolibreTest
 
 class mercadolibreTestTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    // MARK: - Testing fetch
+    func testFetchProducts() {
+        let productsExpectations = expectation(description: "Retrive products list")
+        SearchWorker.fetchSearchResults(search: "iPhone", completion: { products in
+            XCTAssertNotNil(products, "Products list should not be nil.")
+            productsExpectations.fulfill()
+        }, failure: { error in
+            XCTAssertNil(error, "Products list fetch was not successful")
+        })
+        wait(for: [productsExpectations], timeout: 5.0)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testFilterProducts() {
+        let interactor = SearchInteractor()
+        let productsOriginalList = [
+            Product(id: "1", siteId: "MLI", title: "iphone 11", price: 1200.0, availableQuantity: 10, soldQuantity: 30, condition: "New", thumbnail: ""),
+            Product(id: "2", siteId: "MLI", title: "iphone 11 pro", price: 1000.0, availableQuantity: 8, soldQuantity: 50, condition: "New", thumbnail: ""),
+            Product(id: "3", siteId: "MLI", title: "iphone 7 plus", price: 600.0, availableQuantity: 15, soldQuantity: 21, condition: "New", thumbnail: ""),
+            Product(id: "4", siteId: "MLI", title: "iphone 8", price: 800.0, availableQuantity: 9, soldQuantity: 1, condition: "New", thumbnail: ""),
+            Product(id: "5", siteId: "MLI", title: "iphone xr", price: 900.0, availableQuantity: 20, soldQuantity: 6, condition: "New", thumbnail: ""),
+            Product(id: "6", siteId: "MLI", title: "iphone 13", price: 1400.0, availableQuantity: 11, soldQuantity: 5, condition: "New", thumbnail: ""),
+            Product(id: "7", siteId: "MLI", title: "iphone x", price: 1000.0, availableQuantity: 11, soldQuantity: 7, condition: "New", thumbnail: ""),
+            Product(id: "8", siteId: "MLI", title: "iphone 11", price: 1200.0, availableQuantity: 4, soldQuantity: 40, condition: "New", thumbnail: ""),
+            Product(id: "9", siteId: "MLI", title: "iphone 12 mini", price: 1100.0, availableQuantity: 2, soldQuantity: 23, condition: "New", thumbnail: "")
+        ]
+        
+        let filteredData = interactor.filterData(data: productsOriginalList)
+        XCTAssertTrue(filteredData.count == 5, "Filter products list has 5 products.")
+        XCTAssertTrue(filteredData[0].soldQuantity > filteredData[1].soldQuantity, "Filter products list is sorted by sold quantity.")
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

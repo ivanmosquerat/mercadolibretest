@@ -31,11 +31,10 @@ class SearchPresenter: SearchPresenterProtocol {
 
 extension SearchPresenter: SearchInteractorOutputProtocol {
     func onSuccessFetchSearch(with data: [ProductProtocol]) {
-        let filteredData = data.sorted(by: { $0.soldQuantity > $1.soldQuantity }).prefix(5)
-        let arrayData =  Array(filteredData)
+        guard let filteredData = interactor?.filterData(data: data) else { return }
         
         view?.setAllProductsList(with: data)
-        view?.showMainProducts(with: arrayData)
+        view?.showMainProducts(with: filteredData)
     }
     
     func onErrorFetch() {

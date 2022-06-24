@@ -17,4 +17,11 @@ class SearchInteractor: SearchInteractorInputProtocol {
             self?.presenter?.onErrorFetch()
         }
     }
+    
+    func filterData(data: [ProductProtocol]) -> [ProductProtocol] {
+        let filteredData = data.sorted(by: { $0.soldQuantity > $1.soldQuantity }).prefix(5)
+        let arrayData =  Array(filteredData)
+        
+        return arrayData
+    }
 }
