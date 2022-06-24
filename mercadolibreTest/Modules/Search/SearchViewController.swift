@@ -104,7 +104,6 @@ extension SearchViewController: SearchViewProtocol {
                 self.notResultsContainer.isHidden = true
                 self.mainResultsCollecitonView.reloadData()
             }
-            
             self.activityIndicator.stopAnimating()
         }
     }

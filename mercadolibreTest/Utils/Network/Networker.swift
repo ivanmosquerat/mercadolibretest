@@ -9,6 +9,14 @@ import Foundation
 
 class Networker {
     
+    
+    /// Generic method to fetch data.
+    /// - Parameters:
+    ///   - url: url for the request.
+    ///   - type: type of the data to decode.
+    ///   - search: search entered.
+    ///   - completion: closure to manage the success response.
+    ///   - failure: closure to manage the failure response.
     class func fetchData<T>(url: URL,
                             type: T.Type,
                             search: String?,

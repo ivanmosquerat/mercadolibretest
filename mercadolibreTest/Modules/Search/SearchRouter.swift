@@ -26,6 +26,4 @@ class SearchRouter: SearchRouterProtocol {
             sourceView.navigationController?.pushViewController(viewController, animated: true)
         }
     }
-    
-    
 }

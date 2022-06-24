@@ -11,10 +11,6 @@ class DetailsPresenter: DetailsPresenterProtocol {
     weak var view: DetailsViewProtocol?
     var interactor: DetailsInteractorInputProtocol?
     var router: DetailsRouterProtocol?
-    
-    
 }
 
-extension DetailsPresenter: DetailsInteractorOutputProtocol {
-    
-}
+extension DetailsPresenter: DetailsInteractorOutputProtocol {}

@@ -7,6 +7,4 @@
 
 import Foundation
 
-class DetailsRouter: DetailsRouterProtocol {
-    
-}
+class DetailsRouter: DetailsRouterProtocol {}

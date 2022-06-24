@@ -8,8 +8,6 @@
 import Foundation
 
 class SearchPresenter: SearchPresenterProtocol {
-    
-    
     weak var view: SearchViewProtocol?
     var interactor: SearchInteractorInputProtocol?
     var router: SearchRouterProtocol?

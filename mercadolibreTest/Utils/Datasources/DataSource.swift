@@ -15,15 +15,13 @@ enum TypeCell: Int, CaseIterable {
 
 final class DataSource<T>:  NSObject,
                             UICollectionViewDelegate,
-                            UICollectionViewDataSource,
-                            UICollectionViewDelegateFlowLayout {
+                            UICollectionViewDataSource {
     
     weak var searchPresenter: SearchPresenterProtocol?
     weak var resultsPresenter: ResultsPresenterProtocol?
     var data: [T] = []
     var type: TypeCell
     
-    // TODO: add init
     init(type: TypeCell) {
         self.type = type
     }
@@ -51,8 +49,5 @@ final class DataSource<T>:  NSObject,
         case .allResults:
             resultsPresenter?.presentProductDetail(with: product)
         }
-        
     }
-    
-    // MARK: - UICollectionViewDelegateFlowLayout
 }
